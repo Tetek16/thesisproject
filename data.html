@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en=">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/cdb.css"/>
+	<script src="js/cdb.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
+	<title>Thesis</title>
+</head>
+<body>
+<br>
+<nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+      	<a id="Demog" class="nav-link" aria-current="page" href="index.html">Main Page</a>
+      	  	<a class="nav-link" aria-current="page" href="#Demo">Demographic Profile</a>
+      </div>
+    </div>
+  </div>
+</nav>	
+<div class="container">
+	 <br><br>
+	 <figure class="text-center">
+				  <blockquote class="blockquote">			  	
+		<h1> Data of Barangay Angeles Zone-1, Ilayang Bukal, San Diego Zone-3 and San Isidro Zone-4 of Tayabas City</h1>
+				  </blockquote>
+				  </figcaption>
+	</figure>
+	 <p class="text-center">The city has a land area of 230.95 square kilometers or 89.17 square miles which constitutes 2.64% of Quezon's total area. Its population as determined by the 2020 Census was 112,658. This represented 5.78% of the total population of Quezon province, or 0.70% of the overall population of the CALABARZON region. Based on these figures, the population density is computed at 488 inhabitants per square kilometer or 1,263 inhabitants per square mile.</p>
+</div> 
+	<br><br>
+	<div id="Demo" class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-12">	
+				<canvas id="pieChart" width="400" height="400"></canvas>
+			</div> 
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Age</h1>
+				  </blockquote>
+				  </figcaption>
+	</figure>
+				<p style="text-align: justify;">
+					Figure 1 shows that 6 percent of the respondents are under 12 years old while 10 percent belongs to 12 to 17 years old. The highest percentage or 30 percent of the respondents are 18 to 24 years old, the 16 percent of the respondents are 25 to 34 years old, the 13 percent of the respondents showed in 35 to 44 years old, the 11 percent of the respondents are 45 to 54 years old while the 10 percent of the respondents are 55 to 64 years old and lastly, the lowest percentage that shows are 65 and above.
+				</p>
+				<p style="text-align: justify;">
+					According to (Social Meteorological Observation Post, March 2019), by age, the proportion of web users was highest among 18 to 24 years old at 86% (down from 88% in Gregorian calendar month 2018). This was followed by those aged 25 to 24 at 71% (up from 69%); 35 to 40 years at 55%c (down from 60%); 45 to 44years at 30% (down from 32%); and people aged 55years and higher than at 40% (down from 17%).
+ 					In keeping with (Statista Analysis Department Aug. 13, 2021), the net became wide offered within the Philippines in 1994, that junction rectifier to slowly developing web savvy shoppers within the country. In 2020, the quantity of web users within the country grew to more or less 79.7 million folks, accounting for quite half the entire population. The digital population principally belong to the age bracket of 16 years recent and higher than. Statista analysis Department (Nov24, 2021) in a very survey conducted within the Philippines, more or less 86% of the respondents aged between 18 to 24 years recent were web users. Whereas, solely 14% of the respondents aged 55 years and higher than used the net.	
+					According to (Rappler, 2021), for the Philippines, 2 statistics stood out the foremost. The country has the 4th highest differential once it involves web use by age. 94 of 18 to 29 years old use the net, a minimum of sometimes, or own a smartphone. For the 50 plus crowd, the quantity is 12 months that makes for a proportion differential of 58. State has the very best, with a 65-point inequality whereas South Korea has the bottom, with a 5-point differential.
+				</p> 	
+			</div>
+		</div>
+	</div>
+<script>
+var pChart = document.getElementById('pieChart').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'doughnut',
+    data: {
+        labels: ['Under 12 (6%)', '12-17 yrs.old (10%)', '18-24 yrs.old (30%)', '25-34 (16%)', '35-44 (13%)', '45-54 (11%)', '55-64 (10)%', '65 and above (4%)'],
+        datasets: [{
+            label: 'Age',
+            data: [6,10,30,16,13,11,10,4],
+            backgroundColor: ['#23CE6B','#272D2D','#FFEF9F','#E49273','#BCF4DE','#FFB7C3','#EEC6CA','#DED6D1'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-12">	
+				<canvas id="barChart" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Sex</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+					Based on the figure 2, above 35 percent of the respondents are male while 65 percent are female.
+				</p>
+				<p style="text-align: justify;">
+					According to Statista Analysis Department (June 21, 2021), a survey conducted within the Philippines, concerning 50% of web users within the Philippines were females, and 41% were males as of March 2019. The net penetration rate among native customers within the Philippines has enlarged overall since 2006.
+					Filipino ladies use the net over men, per a contemporary survey by the Social Weather Stations (SWS). The poll, taken from March 28 31, showed a record-high 50% of Filipino ladies who are area unit web users, up some extent from 49 % recorded in December last year. On the opposite hand, 41% of Filipino men use the net, down from 44% antecedents. The survey used face-to-face interviews of one, 440 adults and 18 years previous and higher than, nationwide. SWS same the respondents of the March 2019 Social Weather Survey enclosed associate degree equal variety of men and girls. Meanwhile, the amount of web users within the country hardly modified between December 2018 and March 2019. (Social Observation Post, 2019)
+					Given the generality of the net and connected technologies, opportunities and challenges associated with their development, implementation and usage by people and organizations have arisen. People’s beliefs in their ability to effectively utilize the net and perform internet-related tasks will have an effect on the means they use, interact and communicate within the web. To boot, this web self-efficacy is also influenced by gender variations. Responses to 2 reticulate  web self-efficacy scales (Internet Self-Efficacy scale with 39 things across 7 factors and also the sources of web self-efficacy scale with 11 things comprising 3 factors) administered to 127 Filipinos of variable ages, academic backgrounds and work backgrounds (63 men and 64 women) were analyzed. Results indicated that, overall, there's no important distinction between men and girls in most of the various factors related to web self-efficacy and sources of web self-efficacy though there's a big distinction between males and females once it involves psychological and emotional states, specifically web anxiety. However, gender variations is satisfied in several environments just like the home, college or work will facilitate in motivating additional individuals, notwithstanding gender, to create use of the net additional with confidence and harness its potential in their day to day lives. Understanding the various factors associated with web self-efficacy additionally the sources of web self-efficacy will influence people's behavior and attitudes towards the net would also contribute absolutely to step by step eliminating any gender variations which will be gift. 
+
+				</p>
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('barChart').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'pie',
+    data: {
+        labels: ['Male 35%', 'Female 65%'],
+        datasets: [{
+            label:'Sex',
+            data: [35,65],
+            backgroundColor: ['#23CE6B','#272D2D'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+	<div class="row">
+			<div class="col-lg-5 col-sm-12">	
+				<canvas id="civilStatus" width="400" height="400"></canvas>
+			</div> 
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Civil Status</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+			Figure 3 presents the frequency distribution of the respondents according to civil status. It shows that 56 percent of the respondents are single, 39 percent of the respondents are married, 1 percent of the respondents are separated and lastly, 4 percent of the respondents are widowed.
+				</p>
+				<p style="text-align: justify;">
+					Social networking is far and away the one most well liked on-line activity among adult Filipino net users, with concerning 9 in 10 (89%) have ever used on-line social networking sites like Facebook. This can be followed in distant second by 440 yards who share things that they themselves created like photos, videos or design (presumably through on-line social networking sites), and 400 to urge news or data on current events. 37% of net users go browsing to urge general health data, another 37 play on-line games and 28 browsing to urge news on sensitive health topics. Least common on-line activities are: exploitation Twitter and on-line buying. (Iremae D. Labucay Social Weather Stations August 2011)
+				</p>
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('civilStatus').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'doughnut',
+    data: {
+        labels: ['Single 56%', 'Married 39%', 'Separated 4%', 'Widowed 1%'],
+        datasets: [{
+            label: 'Civil Status',
+            data: [56,39,4,1],
+            backgroundColor: ['#23CE6B','#272D2D','#FFEF9F','#E49273'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-12">	
+				<canvas id="educAttainment" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Educational Attainment</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+				Figure 4 presents the frequency distribution of the respondents according to educational attainment. It shows that 6 percent for no schooling completed, 10 percent for nursery school to 8th grade, 8 percent for some high school no diploma, 14 percent for some college no degree, 5 percent for trade technical vocational training, 2 percent for associate degree, 12 percent for bachelor’s degree while 1 percent for master’s degree and lastly, 4 percent for professional degree.
+				</p>
+				<p style="text-align: justify;">
+				In a survey conducted within the Philippines, concerning 79% of the respondents were school graduates or postgraduates used the web within the same survey and 50% of web users within the Philippines were females. (Statista Analysis Department June 21, 2021)
+				This report on the patterns of web use within the Philippines’ victimization survey knowledge gathered by Social Weather Stations (SWS), a social analysis institute within the Philippines. As of March 2014, web usage rose to 35% of the population compared to 9% in 1998. However, the info indicates the presence of digital divide in web use with web use being higher within the capital town, in urban areas, among the middle-to-upper categories, high school graduates and also the youth. Filipino web users access the web mostly for social networking instead of info seeking or learning, power industrial activities, recreation and leisure. (Iremae D. Labucay, 2014)
+				</p>
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('educAttainment').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'doughnut',
+    data: {
+        labels: ['No Schooling Completed 6%', 'Nursery School to 8th Grade 10%', 'Some High School, No Diploma 25%', 'High School Graduate 38%', 'Some College Credit, No Degree 14%', 'Trade Technical Vocational Training 5%', 'Associate Degree 2%', 'Bachelor s Degree 12%', 'Master s Degree 1%', 'Professional Degree 4%'],
+        datasets: [{
+            label: 'Educational Attainment',
+            data: [6,10,25,38,14,5,2,12,1,4],
+            backgroundColor: ['#23CE6B','#272D2D','#FFEF9F','#E49273','#BCF4DE','#FFB7C3','#EEC6CA','#DED6D1','#F6AF65','#F8C630'],
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-12">	
+				<canvas id="famSize" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Income</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+				Figure 5 presents the frequency distribution of the respondents according to income. It shows that 82 percent for below 10, 975, 12 percent for 10, 975 to 21, 914 while 5 percent for 21, 914 to 43, 828 and lastly, 2 percent of the respondents fall to 43,828 to 76, 669.
+				</p>
+				<p style="text-align: justify;">
+					A stark distinction is seen from the previous financial condition incident reports conducted triennially in 2006, 2009 and 2012. From 2006 to 2009, financial condition incidence declined by alone 0.2%. And from 2009 to 2012, the decline registered was alone 0.7%. These numbers fared very off from a pair of 0.1% decrease in financial condition incidence recently incurred.
+					The monthly financial condition threshold for a family of 5 could be a mean gain of 8, 022 per month. This amount is enough to cover one family’s basic food and non-food desires. Financial condition threshold refers to the minimum gain a family or individual ought to earn thus on be thought of “not poor”. (National applied mathematics Coordination Board (NSCB) and National Statistics Office (NSO), 2014)
+				</p>
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('famSize').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'doughnut',
+    data: {
+        labels: ['Below 10, 975 (81%)', '10, 975 to 21, 914 (12%)','21, 914 to 43, 838 (5%)', '43, 828 to 76, 669 (2%)'],
+        datasets: [{
+            label: 'Income',
+            data: [81,12,5,2],
+            backgroundColor: ['#23CE6B','#272D2D','#FFEF9F','#E49273'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-12">	
+				<canvas id="yrsofRes" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Source of Income</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+				Figure 6 presents the frequency distribution of the respondents according to source of income. It shows that 14 percent for employed for wages, 22 percent for self-employed, 5 percent for out of work and looking for works, 6 percent for out of work but not currently looking for work, 11 percent for a homemaker, 35 percent for a student, 3 percent for retired while 2 percent for unable to work and lastly, 3 percent for others. 
+				</p>
+				<p style="text-align: justify;">
+				There are numerous terms for financial gain as a result of their numerous ways that of earning financial gain. Financial gain from a straightforward students, employment or self-employment is wages or pay. Deposit accounts, like savings accounts, earn interest that might additionally come back from disposal. Owning stock entitles the investor to a dividend, if there's one. Owning a bit of a partnership or in private command corporation entitles one to a draw. You’ll invest in several other forms of assets, like antiques, art, coins, land, or commodities like soybeans, live bovine, platinum, or lightweight fossil fuel. The principle is that the same: finance is dealing capital or commerce it for associate in Nursing Quality which will be resold later or which will produce future financial gain or both. Capital is oversubscribed within the capital market and lent within the credit market a specific a part of the capital market (just like the dairy farm section may be a specific part of the supermarket). (Adam Smith, Nov. 23, 2009)	
+				</p>
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('yrsofRes').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'doughnut',
+    data: {
+        labels: ['Employed for wages 14%', 'Self-employed 21%','Out of work and looking for work 5%', 'Out of work but not currently looking for work 6%', 'A homemaker 11%', 'A student 35%', 'Retired 3%', 'Unable to work 2%', 'Others 3%'],
+        datasets: [{
+            label: 'Source of Income',
+            data: [12,21,5,6,11,35,3,2,3],
+            backgroundColor: ['#23CE6B','#272D2D','#FFEF9F','#E49273','#BCF4DE','#FFB7C3','#EEC6CA','#DED6D1','#F6AF65','#F8C630'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-12"> 	 	
+				<canvas id="srcofIncome" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Family Size</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+					Figure 7 shows the frequency distribution of the respondents according to family size. 1 percent for one family member, 5 percent for two family members, 13 percent for three family members, 21 percent for four family members, 26 percent for five family members, 12 percent for six family members, 13 percent for seven family members while 4 percent for eight family members and lastly, 5 percent for nine or more family members.
+				</p>
+				<p style="text-align: justify;">
+					In the Philippines, over 33 of the households have 7 or additional members of the family, whereas 200 of urban and 27 of rural households have 4 or additional. The chance of poorness related to enhanced variety of youngsters of kid is 44-50% for one child and 60-78% for those with 5. Households pay up to 100% of their total financial gain to lift one kid, 18% for 2 and 26 for 4 kids. As a result of several families lack, the resources to lift kids the per kid share drops dramatically with every kid, 4 kids spend 25 less per kid than will one with a pair of kids. Occupation additionally affects financial gain because the highest poorness rates are among heads of United Nations Agency laborers (60%) and agricultural staff (73%). The most effective resolution is associate in Nursing Integrated Approach that increases in birth control, education and agricultural reform. (Asia Political Action Committee Pop Policy, 2015)
+				</p>
+				</div>	
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('srcofIncome').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'doughnut',
+    data: {
+        labels: ['1 (1%)', '2 (5%)', '3 (13%)', '4 (21%)', '5 (26%)', '6 (12%)', '7 (13%)', '8 (4%)', '9 or more (5%)'],
+        datasets: [{
+            label: 'Family Size',
+            data: [1,5,13,21,26,12,13,4,5],
+            backgroundColor: ['#23CE6B','#272D2D','#FFEF9F','#E49273','#BCF4DE','#FFB7C3','#EEC6CA','#DED6D1','#F6AF65','#F8C630'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-sm-12"> 	 	
+				<canvas id="famIncome" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Years of Residency</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+				Figure 8 shows frequency distribution of the respondents according to years of residency. 7 percent of the data are zero to five years while 13 percent of the data are six to ten years and lastly, with a highest percentage of the data that shows 80 percent are 11 and above years.
+				</p>
+				<p style="text-align: justify;">
+					It is vital that residents possess level of technical ability. However, this doesn’t mean that fortunate residents have to be compelled to be programmers. Collectively respondent phrased it; all librarians ought to be “computer literate if not laptop eloquent” (G. Needham, 2011). Technical ability could embrace understanding and assessing what skills level is required to figure to implement an answer. Technical ability additionally means the resident has the power to interpret wants into purposeful necessities. Whereas this could not mean writing necessities documentation, it's vital for the resident to possess a capability to grasp however end-user wants are often translated into technical solutions, and the other way around. In addition, residents have to be compelled to take a “system” approach by understanding however technology systems work and act with one another.
+				</p>
+				</div>	
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('famIncome').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'doughnut',
+    data: {
+        labels: ['0 to 5 (7%)', '6 to 10 (13%)', '(11 and above 80%)'],
+        datasets: [{
+            label: 'Years of Residency',
+            data: [7,13,80],
+            backgroundColor: ['#23CE6B','#272D2D','#FFEF9F'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-12">	
+				<canvas id="nEt" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Internet Access at Home</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+					Chart shows the number of Availabilities of Computer Facilities of the Respondents in terms of Internet Access at Home. It shows that one hundred twenty-five (125) of the respondents answered “yes” while one hundred fifty-eight (158) of the respondents answered “no”. It can be seen that the “no” category got the highest number of availabilities of internet access at home while the yes category got the lowest number.
+				</p>
+				<p style="text-align: justify;">
+					“Bridging the Rural-Urban Digital Divide” diary series exploring this state of broadband net access in rural and therefore the challenges customers face in lightweight of social distancing and COVID-19. Net access has evolved from a luxury some will afford to a person's right. It’s manifestly clear currently, in lightweight of the coronavirus irruption, however essential net handiness is to all or any operations of daily life, economic, social and political. Yet, rural communities stay underserved and unnoted once it involves broadband net services.
+					As social distancing measures are enforced round the world, major telecommunication firms have upraised information caps and offered further information to satisfy the rise in demand for urban home net subscribers. However, rural net users square measure still left behind. Not solely is coverage inconsistent, access scarce, and speeds abysmal, however relief on information caps and over-the-hill fees is denied to rural customers as a result of they use LTE sticks and mobile hotspots, one in every of the only a few choices accessible to them. In line with information from the Federal Communications Commission, thirty ninth of individuals living in rural areas lack access to high-speed broadband, compared with simply four-dimensional of urban. (Federal Communications Commissions, 2021)
+				</p>
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('nEt').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'doughnut',
+    data: {
+        labels: ['Yes 44%', 'No 56%'],
+        datasets: [{
+            label:'Sex',
+            data: [44,56],
+            backgroundColor: ['#23CE6B','#272D2D'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-sm-12"> 	 	
+				<canvas id="BRGY" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Free Internet in Barangay</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+					Chart shows the number of Availabilities of Computer Facilities of the Respondents in terms of Free Internet. It shows that two hundred eighty-three (283) of the respondents answered “no free internet” in their barangay. It shows that “no” got the highest number of availabilities of free internet in barangay while “yes” got the lowest number.
+				</p>
+				<p style="text-align: justify;">
+					Citing the (National data and engineering (ICT) Survey, 2019), Prince Albert aforesaid “Some communities particularly in low access to telecommunication towers, fiber optic cable and free WiFi.” The poll was conducted before the COVID-19 pandemic, he noted. 
+					Urban barangays, he said, have sixty one % of telecommunication towers, 3 times beyond rural barangays' nineteen %. Meanwhile, ninety five % of telecommunication towers square measure “privately-owned”.
+					Those barangays while not towers could have access to cell signals however they vary: 61% of them get 4G signals, with higher concentration in urban barangays at 83% whereas it's at 44% in rural areas. Solely 12% of all barangays have access to free Wifi, Prince Albert aforesaid “Although fiber offers the best information measure and dependableness, it's terribly pricey to deploy in areas with low population density.”
+		
+
+				</p>
+				</div>	
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('BRGY').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'doughnut',
+    data: {
+        labels: ['Yes 0%', 'No 100%'],
+        datasets: [{
+            label: 'Years of Residency',
+            data: [0,100],
+            backgroundColor: ['#23CE6B','#272D2D'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<div align="center">
+<a href="#Demog" class="btn btn-primary">Top Page</a>
+</div>
+<br><br>
+</body>
+</html>
+				

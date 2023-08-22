@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en=">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/cdb.css"/>
+	<script src="js/cdb.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
+	<title>Thesis</title>
+</head>
+<body>
+<br>
+<nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+      	<a id="Demog" class="nav-link" aria-current="page" href="index.html">Main Page</a>
+      	  	<a class="nav-link" aria-current="page" href="#Demo">Demographic Profile</a>
+      	  		<a class="nav-link" aria-current="page" href="angeles zone-1places.html">Places</a>
+      </div>
+    </div>
+  </div>
+</nav>	
+<div class="container">
+	 <br><br>
+	 <figure class="text-center">
+				  <blockquote class="blockquote">			  	
+		<h1> Data of Barangay Angeles Zone-1</h1>
+				  </blockquote>
+				  </figcaption>
+	</figure>
+	 <p class="text-center">Angeles Zone I, formerly Poblacion, is a barangay in the city of Tayabas, in the province of Quezon. Its population as determined by the 2020 Census was 1,995. This represented 1.77% of the total population of Tayabas.</p>
+</div> 
+	<br><br>
+	<div id="Demo" class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-12">	
+				<canvas id="pieChart" width="400" height="400"></canvas>
+			</div> 
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Devices</h1>
+				  </blockquote>
+				  </figcaption>
+	</figure>
+				<p style="text-align: justify;">
+					The highest number or 122 of the respondents have cellphone while the lowest number or 0 dropped to others.
+				</p>
+			</div>
+		</div>
+	</div>
+<script>
+var pChart = document.getElementById('pieChart').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'bar',
+    data: {
+        labels: ['Laptop 27', 'Desktop 5', 'Cellphone 122', 'Printer 7', 'Others 0'],
+        datasets: [{
+            label: 'Devices',
+            data: [27,5,122,7,0],
+            backgroundColor: ['#23CE6B','#272D2D','#FFEF9F','#E49273','#BCF4DE'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-12">	
+				<canvas id="barChart" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Brands</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+					The highest number or 89 of the respondents belong to others including the brands of; Vivo, Samsung, Oppo, Nokia, Cherry Mobile, Infinix, Techno, Huawei and Realme. It can be seen that the others got the highest number of availability of brands while the brand of Apple, HP, Acer, Asus and Lenovo have gone down to the lowest number of availabilities of the brands of the respondents.
+				</p>
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('barChart').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'bar',
+    data: {
+        labels: ['Apple 9', 'HP 8', 'Acer 6', 'Asus 13', 'Lenovo 7', 'Others 89'],
+        datasets: [{
+            label:'Brands',
+            data: [9,8,6,13,7,89],
+            backgroundColor: ['#23CE6B','#272D2D', '#FFEF9F', '#E49273','#BCF4DE','#FFB7C3'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+	<div class="row">
+			<div class="col-lg-5 col-sm-12">	
+				<canvas id="civilStatus" width="400" height="400"></canvas>
+			</div> 
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Types of Internet</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+			It can be seen that the Converge got the highest number of availability of kinds of internet with a  number of 20 while others got the lowest number of availability of the kinds of internet with 0 number.
+				</p>
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('civilStatus').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'bar',
+    data: {
+        labels: ['Fiber 6', 'PLDT 16', 'Converge 20', 'MyCATV 3', 'Celebrity Cable Network 13', 'Globe at Home 3', 'Others 0'],
+        datasets: [{
+            label: 'Civil Status',
+            data: [6,16,20,3,13,3,0],
+            backgroundColor: ['#23CE6B','#272D2D','#FFEF9F','#E49273','#BCF4DE','#FFB7C3','#EEC6CA'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-12">	
+				<canvas id="educAttainment" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Satisfaction</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+				It can be seen that “satisfied” got the highest number of availabilities of internet services at home while “dissatisfied” got the lowest number.
+				</p>
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('educAttainment').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'bar',
+    data: {
+        labels: ['Very Satisfied 8', 'Satisfied 88', 'Dissatisfied 3', 'Very Dissatisfied 0'],
+        datasets: [{
+            label: 'Satisfaction',
+            data: [8,88,3,0],
+            backgroundColor: ['#23CE6B','#272D2D','#FFEF9F','#E49273'],
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-12">	
+				<canvas id="famSize" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Reason of Not Having Internet</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+				It can be seen that the highest number of answers are “It is not available in the area” while the lowest number of answers are the “others”.
+				</p>
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('famSize').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'bar',
+    data: {
+        labels: ['I do not know to use it 10', 'It is not available in the area 64', 'I cannot afford 49', 'Others 0'],
+        datasets: [{
+            label: 'Reason of Not Having Internet',
+            data: [10,64,49,0],
+            backgroundColor: ['#23CE6B','#272D2D','#FFEF9F','#E49273'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-12">	
+				<canvas id="yrsofRes" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Technical Repair Shop in Barangay</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+				It shows that “yes” got the highest number of availabilities of technical repair shop in barangay while “no” got the lowest number.
+				</p>
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('yrsofRes').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'bar',
+    data: {
+        labels: ['Yes 100%', 'No 0%'],
+        datasets: [{
+            label: 'Technical Repair Shop in Barangay',
+            data: [100,0],
+            backgroundColor: ['#23CE6B','#272D2D'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-12">	
+				<canvas id="comShop" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Computer Shop in Barangay</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+				It shows that “yes” got the highest number of availabilities of computer shop in barangay while “no” got the lowest number.
+				</p>
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('comShop').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'bar',
+    data: {
+        labels: ['Yes 129', 'No 0'],
+        datasets: [{
+            label: 'Computer Shop in Barangay',
+            data: [129,0],
+            backgroundColor: ['#23CE6B','#272D2D'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-12"> 	 	
+				<canvas id="srcofIncome" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Internet Uses</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+					It shows that the school purposes got the highest number of internet uses while  paying bills got the lowest number of the internet uses.  
+				</p>
+				</div>	
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('srcofIncome').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'bar',
+    data: {
+        labels: ['School Purposes 78', 'Works/Jobs 20', 'Business 13', 'Online Shopping 32', 'Friendship and Dating 8', 'Paying Bills 7', 'Past Time 56' ],
+        datasets: [{
+            label: 'Internet Uses',
+            data: [78,20,13,32,8,7,56],
+            backgroundColor: ['#23CE6B','#272D2D','#FFEF9F','#E49273','#BCF4DE','#FFB7C3','#EEC6CA'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-sm-12"> 	 	
+				<canvas id="famIncome" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Internet Time</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+				It shows that “1-3 hours” got the highest number of spending time using internet while “more than 10 hours” got the lowest number.
+				</p>
+				</div>	
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('famIncome').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'bar',
+    data: {
+        labels: ['1-3 (52) hours', '4-8 hours (39)', 'More than 10 hours(31)'],
+        datasets: [{
+            label: 'Years of Residency',
+            data: [52,39,31],
+            backgroundColor: ['#23CE6B','#272D2D','#FFEF9F'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-sm-12"> 	 	
+				<canvas id="LandOwned" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Land Owned</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+				It shows that “no” has the highest number and “yes” has the lowest.
+				</p>
+				</div>	
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('LandOwned').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'bar',
+    data: {
+        labels: ['Yes 36', 'No 94'],
+        datasets: [{
+            label: 'Land Owned',
+            data: [36,94],
+            backgroundColor: ['#23CE6B','#272D2D'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-sm-12"> 	 	
+				<canvas id="LandHolding" width="400" height="400"></canvas>
+			</div>
+			<div class="col">
+				<figure class="text-center">
+				  <blockquote class="blockquote">
+				    <h1>Land Holding</h1>
+				  </blockquote>
+				  </figcaption>
+			</figure>
+				<p style="text-align: justify;">
+				It shows that 50-80 sqm. have the highest number of land holding while 80-100 sqm. have the lowest number of land holding.
+				</div>	
+			</div>
+	</div>
+<script>
+var pChart = document.getElementById('LandHolding').getContext('2d');
+var myChart = new Chart(pChart, {
+    type: 'bar',
+    data: {
+        labels: ['50-80 sqm. (19)', '80-100 sqm. (15)'],
+        datasets: [{
+            label: 'Land Owned',
+            data: [19,15],
+            backgroundColor: ['#23CE6B','#272D2D'], 
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+<hr>
+<br><br>
+<div align="center">
+<a href="#Demog" class="btn btn-primary">Top Page</a>
+</div>
+<br><br>
+</body>
+</html>		
